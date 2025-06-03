@@ -213,6 +213,30 @@ video {
 	/* margin-bottom: 1.7rem; */
 }
 
+.sponsors {
+	/* font-size: 0.6rem; */
+	flex-direction: column;
+	/* align-items: center; */
+	padding-right: 8%;
+	padding-bottom: 8%;
+	background-image: url("../assets/bg-imgs/rhino.webp");
+}
+
+.sponsors h2 {
+	margin-bottom: 4%;
+}
+
+.sponsors #logos {
+	height: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+
+/* .sponsors img { */
+/* width: 40%; */
+/* height: 72%; */
+/* } */
+
 footer {
 	background-color: #4cc2e2;
 	background-image: url("../assets/bg-imgs/theravisier.webp");
