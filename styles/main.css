@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+	--wbg: white;
+	--wfg: black;
+	--fonx: "Averia Serif Libre", serif;
+	--background: var(--wbg);
+	--foreground: var(--wfg);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: var(--wfg);
+		--foreground: var(--wbg);
+	}
+
+	a:visited {
+		color: fuchsia;
+	}
+
+	a {
+		color: cornflowerblue;
+	}
+}
+
+:root {
+	font-size: 4.0vw;
+	box-sizing: border-box;
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: var(--fonx);
+}
+
+body {
+	margin: 0;
+}
+
+.section {
+	padding-top: 4%;
+	padding-bottom: 4%;
+	padding-left: 8%;
+	display: flex;
+	/* flex: 2 1 auto; */
+	aspect-ratio: 16 / 5;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+p,
+/* a, */
+h2,
+h3,
+li {
+	background-color: var(--background);
+	height: fit-content;
+	width: fit-content;
+}
+
+h2 {
+	margin: 0;
+	/* padding-top: 4%; */
+	font-size: 1.5rem;
+	/* padding-bottom: 4%; */
+}
+
+.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* .box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+} */
+
+.logo {
+	/* padding-top: 4%; */
+	width: 100%;
+	display: block;
+	justify-content: center;
+	align-items: flex-end;
+	/* height: 400%; */
+	padding-left: 0;
+	background-image: url("../assets/bg-imgs/nyuszik.webp");
+	/* background-color: #330036; */
+}
+
+.logo img {
+	padding-top: 15%;
+	width: 50%;
+}
+
+.where {
+	/* background-color: #56EEF4; */
+	/* background-image: url("../duerer-color.webp"); */
+	padding-left: 4%;
+	padding-right: 4%;
+	justify-content: space-evenly;
+	align-items: center;
+	background-image: url("../assets/bg-imgs/nyamikonyv.webp");
+}
+
+.where #text {
+	display: flex;
+	flex-direction: column;
+}
+
+.when {
+	flex-direction: column;
+	/* background-color: #731963; */
+	background-image: url("../assets/bg-imgs/dinosaurgrr.webp");
+}
+
+.when p {
+	margin-left: 8%;
+}
+
+.how {
+	flex-direction: column;
+	/* background-color: #0B3C49; */
+	background-image: url("../assets/bg-imgs/apokalyps.webp");
+}
+
+.how #apply {
+	padding-left: 4%;
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* justify-content: space-around; */
+}
+
+.about {
+	flex-direction: column;
+	/* padding-left: 0; */
+	padding-top: 4%;
+	padding-bottom: 2%;
+	aspect-ratio: auto;
+	/* align-items: center; */
+	align-items: flex-start;
+	justify-content: space-between;
+	background-image: url("../assets/bg-imgs/vacsi.webp");
+}
+
+.bober {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	width: 90%;
+	align-items: start;
+	/* flex-direction: column; */
+}
+
+video {
+	/* width: 68%; */
+	width: 45%;
+	aspect-ratio: 16/9;
+	/* margin-right: 8%; */
+	margin-left: auto;
+	border-radius: 0.2rem;
+	border: 0.12rem solid var(--wfg);
+}
+
+#pathos {
+	width: 90%;
+	font-size: 0.94rem;
+	margin-top: 8%;
+}
+
+.where iframe {
+	width: 60%;
+	/* height: 90%; */
+	/* width: 12rem; */
+	aspect-ratio: 16/9;
+	/* height: 16rem; */
+	border-radius: 0.2rem;
+	border: 0.12rem solid var(--wfg);
+}
+
+.disclaimer {
+	padding-left: 4%;
+}
+
+.disclaimer p,
+.disclaimer strong {
+	font-size: 0.7rem;
+	/* margin-bottom: 1.7rem; */
+}
+
+footer {
+	/* background-color: dodgerblue; */
+	background-image: url("../assets/bg-imgs/theravisier.webp");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	aspect-ratio: 16 / 2.4;
+	font-size: 0.8rem;
+	text-align: center;
+}

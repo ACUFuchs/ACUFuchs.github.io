@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jeromos Kovács">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ACU Fuchs</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/png" href="assets/acufuchs-logos/circle-black.png">
+    <link rel="icon" type="image/svg+xml" id="favicon" href="assets/acufuchs-logos/circle-black.svg">
+    <link rel="apple-touch-icon" href="assets/acufuchs-logos/circle-black.svg">
+    <script>
+      function setFavicon() {
+      const favicon = document.getElementById("favicon");
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        favicon.href = "assets/acufuchs-logos/circle-white.svg";
+      } else {
+        favicon.href = "assets/acufuchs-logos/circle-black.svg";
+      }
+    }
+    // Set favicon on page load
+    setFavicon();
+    // Listen for changes in preferred color scheme
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+    </script>
+    <meta name="description" content="ACU Fuchs">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+  </head>
+  <body>
+    <!-- <h1>ACU Fuchs</h1> -->
+    <div class="logo section centered">
+      <picture>
+        <source srcset="assets/acufuchs-logos/rect-white.svg" media="(prefers-color-scheme: dark)">
+        <img id="logo" class="centered" src="assets/acufuchs-logos/rect-black-white_bg.svg" alt="macho ACU Fuchs logo">
+      </picture>
+    </div>
+    <div class="when section">
+      <h2>when</h2>
+      <p><strong>2025. jun. 14. evening</strong></p>
+      <p><a href="assets/ACU_Fuchs.ics">add date to your calendar</a></p>
+    </div>
+    <div class="where section">
+      <iframe title="openstreetmap showing where the event center is located: Vienna, Donau Island" src="https://www.openstreetmap.org/export/embed.html?bbox=16.189041137695316%2C48.154176701412744%2C16.591758728027347%2C48.334571409108214&amp;layer=mapnik&amp;marker=48.24445358418019%2C16.390399932861328"></iframe>
+      <div id="text">
+        <h2>where</h2>
+        <p><strong>Vienna:</strong><br>
+          <a target="_blank" href="https://maps.app.goo.gl/4S7msXWBXx9MGyR8A">48.2446N,<br>16.3910E</a></p>
+      </div>
+    </div>
+    <div class="how section">
+      <h2>how to apply</h2>
+      <div id="apply">
+        <p>
+          <strong>fill out
+            <a target="_blank" href="https://app.formbricks.com/s/cm9pw8oibfd1yw201b08kx0o3">this form</a></strong>
+        </p>
+        <p>follow us on
+          <a target="_blank" href="https://www.instagram.com/acufuchs/?utm_source=ig_web_button_share_sheet">instagram</a></p>
+      </div>
+    </div>
+    <div class="about section">
+      <div class="bober">
+        <h2>about us</h2>
+        <video controls poster="assets/thumbnail.jpg">
+          <source src="assets/ACU_Fuchs.webm" type="video/webm">
+        </video>
+      </div>
+      <p id="pathos">4 crazy, young friends were bored in the rain under The Bridge, started racing with folding bikes. Having had incredible amount of fun, couldn't stop for the next few days. Decided to organize it as a nocturnal crit race next year.</p>
+    </div>
+    <!-- <hr> -->
+    <footer><p class="centered">contact us via
+        <a href="mailto:acufuchs@gmail.com">email</a>, or
+        <a target="_blank" href="https://github.com/jeromeschmied/jeromeschmied.github.io/issues/new">open a GitHub issue</a></p></footer>
+  </body>
+</html>
