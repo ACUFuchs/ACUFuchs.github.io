@@ -222,6 +222,12 @@ footer {
 	padding-top: 2%;
 	padding-bottom: 2%;
 	aspect-ratio: 16 / 2.4;
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	text-align: center;
+}
+
+footer #jmail {
+	background-color: blueviolet;
+	border-radius: 0.1rem;
+	font-size: 0.6rem;
 }
