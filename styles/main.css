@@ -82,8 +82,8 @@ h2 {
 	align-items: flex-end;
 	/* height: 400%; */
 	padding-left: 0;
+	background-color: #0b5170;
 	background-image: url("../assets/bg-imgs/nyuszik.webp");
-	/* background-color: #330036; */
 }
 
 .logo img {
@@ -92,12 +92,11 @@ h2 {
 }
 
 .where {
-	/* background-color: #56EEF4; */
-	/* background-image: url("../duerer-color.webp"); */
 	padding-left: 4%;
 	padding-right: 4%;
 	justify-content: space-evenly;
 	align-items: center;
+	background-color: #ceb53b;
 	background-image: url("../assets/bg-imgs/nyamikonyv.webp");
 }
 
@@ -108,7 +107,7 @@ h2 {
 
 .when {
 	flex-direction: column;
-	/* background-color: #731963; */
+	background-color: #cb10d4;
 	background-image: url("../assets/bg-imgs/dinosaurgrr.webp");
 }
 
@@ -118,7 +117,7 @@ h2 {
 
 .how {
 	flex-direction: column;
-	/* background-color: #0B3C49; */
+	background-color: #f810b7;
 	background-image: url("../assets/bg-imgs/apokalyps.webp");
 }
 
@@ -135,6 +134,7 @@ h2 {
 	padding-bottom: 2%;
 	font-size: 0.75rem;
 	flex-direction: column;
+	background-color: #dbdcca;
 	background-image: url("../assets/bg-imgs/szentirma.webp");
 }
 
@@ -163,6 +163,7 @@ ol li:before {
 	/* align-items: center; */
 	align-items: flex-start;
 	justify-content: space-between;
+	background-color: #42cd6a;
 	background-image: url("../assets/bg-imgs/vacsi.webp");
 }
 
@@ -213,7 +214,7 @@ video {
 }
 
 footer {
-	/* background-color: dodgerblue; */
+	background-color: #4cc2e2;
 	background-image: url("../assets/bg-imgs/theravisier.webp");
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -235,6 +236,7 @@ footer #jmail {
 }
 
 .stack-container {
+	background-color: #4cc2e2;
 	background-image: url('../assets/bg-imgs/fake.webp');
 	flex-direction: column;
 	width: 100%;
