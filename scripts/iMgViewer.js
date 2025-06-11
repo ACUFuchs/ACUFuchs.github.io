@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fullscreenOverlay.classList.add('active');
             // fullscreenOverlay.style.visibility = 'visible';
 
-            document.body.style.overflow = 'hidden'; // this makes the whole page unscrollable
+            document.body.style.overflow = 'hidden';  // this makes the whole page unscrollable
             // imgStack.style.visibility = 'hidden';
         } else {
             fullscreenOverlay.classList.remove('active');
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Start Drag Handler ---
     const handleStart = (ev) => {
-        console.log('START');
         if (isFullscreen) return;
         // only start dragging if the top image is being dragged
         if (imgs[topIdx] === ev.target) {
@@ -81,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- During Drag Handler ---
     const handleDrag = (ev) => {
-        console.log('DURING');
         if (!isDragging || !topImgRef || (!ev.clientX && !ev.touches) || isFullscreen) return;
 
         // desktop: cursor position || mobile: touch position
@@ -146,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- End Drag Handler ---
     const handleEnd = (ev) => {
-        console.log('END');
         if (!isDragging || !topImgRef || (!ev.clientX && !ev.touches)) return;
 
         const endX = ev.clientX || ev.changedTouches[0].clientX;  // ended drag at
@@ -175,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;  // reset drag state
 
         if (Math.abs(dragDist) < 3) {
+            ev.preventDefault();  // matters on mobile for some reason
             // we interpret it as a click
             toggleFullscreen();
         } else {

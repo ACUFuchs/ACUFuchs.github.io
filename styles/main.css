@@ -185,7 +185,7 @@ video {
 	/* margin-right: 8%; */
 	margin-left: auto;
 	border-radius: 0.2rem;
-	border: 0.12rem solid var(--wfg);
+	border: 0.3vw solid var(--wfg);
 }
 
 #pathos {
@@ -201,7 +201,7 @@ video {
 	aspect-ratio: 16/9;
 	/* height: 16rem; */
 	border-radius: 0.2rem;
-	border: 0.12rem solid var(--wfg);
+	border: 0.3vw solid var(--wfg);
 }
 
 .disclaimer {
@@ -232,17 +232,22 @@ footer #jmail {
 	font-size: 0.6rem;
 }
 
+.stack-container h2 {
+	margin-left: 8%;
+}
+
 .stack-container {
+	background-image: url('../assets/bg-imgs/fake.webp');
 	flex-direction: column;
-	margin-bottom: 8vh;
-	width: 90%;
-	height: 75vh;
+	width: 100%;
+	padding-left: 0;
+	height: 70vw;
 }
 
 .image-stack {
 	position: relative;
-	width: 80%;
-	height: 80%;
+	width: 50%;
+	height: 72%;
 	/* for overall stack movement */
 	transition: transform 0.5s ease-out;
 }
@@ -250,7 +255,7 @@ footer #jmail {
 .image-stack img {
 	position: absolute;
 	top: 12%;
-	left: 8%;
+	left: 44%;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -263,13 +268,14 @@ footer #jmail {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	border: 0.3vw solid var(--wfg);
 
 	/* ease-in-out */
 	transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), z-index 0.04s linear;
 }
 
 .image-stack img.swiping {
-	/* Disable transitions during active drag */
+	/* disable transitions during active drag */
 	transition: none;
 }
 
@@ -306,6 +312,7 @@ footer #jmail {
 	object-fit: contain;
 	/* override any stack transforms */
 	transform: none;
+	border: 0.3vw solid var(--wfg);
 	border-radius: 0.2rem;
 	box-shadow: none;
 	/* indicate it can be closed */
