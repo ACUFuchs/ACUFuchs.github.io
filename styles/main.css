@@ -213,29 +213,33 @@ video {
 	/* margin-bottom: 1.7rem; */
 }
 
-.sponsors {
-	/* font-size: 0.6rem; */
-	flex-direction: column;
-	/* align-items: center; */
-	padding-right: 8%;
-	padding-bottom: 8%;
-	background-image: url("../assets/bg-imgs/rhino.webp");
+.sponsors h2 {
+	margin-left: 8%;
 }
 
-.sponsors h2 {
-	margin-bottom: 4%;
+.sponsors {
+	flex-direction: column;
+	padding-left: 0;
+	background-color: #ae974d;
+	background-image: url("../assets/bg-imgs/rhino.webp");
+	height: 32vw;
+	aspect-ratio: auto;
 }
 
 .sponsors #logos {
-	height: 50%;
-	display: flex;
-	justify-content: space-between;
+	padding-top: 8%;
+	height: 34%;
+}
+
+.sponsors #logos #brompton,
+.sponsors #logos #chain {
+	background-color: white;
 }
 
 .sponsors img {
-	background-color: white;
-	/* width: 40%; */
-	/* height: 72%; */
+	border-radius: 2vw;
+	border: 0.3vw solid var(--wfg);
+	height: 100%;
 }
 
 footer {
