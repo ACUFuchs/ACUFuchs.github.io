@@ -232,10 +232,11 @@ video {
 	justify-content: space-between;
 }
 
-/* .sponsors img { */
-/* width: 40%; */
-/* height: 72%; */
-/* } */
+.sponsors img {
+	background-color: white;
+	/* width: 40%; */
+	/* height: 72%; */
+}
 
 footer {
 	background-color: #4cc2e2;
