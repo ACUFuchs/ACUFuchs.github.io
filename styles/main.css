@@ -236,6 +236,11 @@ video {
 	background-color: white;
 }
 
+.sponsors a {
+	/* yessir! */
+	color: rgba(0, 0, 0, 0);
+}
+
 .sponsors img {
 	border-radius: 2vw;
 	border: 0.3vw solid var(--wfg);
