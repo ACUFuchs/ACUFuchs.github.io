@@ -213,6 +213,40 @@ video {
 	/* margin-bottom: 1.7rem; */
 }
 
+.sponsors h2 {
+	margin-left: 8%;
+}
+
+.sponsors {
+	flex-direction: column;
+	padding-left: 0;
+	background-color: #ae974d;
+	background-image: url("../assets/bg-imgs/rhino.webp");
+	height: 32vw;
+	aspect-ratio: auto;
+}
+
+.sponsors #logos {
+	padding-top: 8%;
+	height: 34%;
+}
+
+.sponsors #logos #brompton,
+.sponsors #logos #chain {
+	background-color: white;
+}
+
+.sponsors a {
+	/* yessir! */
+	color: rgba(0, 0, 0, 0);
+}
+
+.sponsors img {
+	border-radius: 2vw;
+	border: 0.3vw solid var(--wfg);
+	height: 100%;
+}
+
 footer {
 	background-color: #4cc2e2;
 	background-image: url("../assets/bg-imgs/theravisier.webp");
