@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function toggleFullscreen() {
+        if (imgs[topIdx].classList.contains('isLink')) return;
+
         if (!isFullscreen) {
             fullscreenImg.src = imgs[topIdx].src;
             fullscreenImg.alt = imgs[topIdx].alt;
