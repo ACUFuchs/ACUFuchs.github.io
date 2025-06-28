@@ -172,7 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;  // reset drag state
 
         if (Math.abs(dragDist) < 3) {
-            ev.preventDefault();  // matters on mobile for some reason
+            if (imgs[topIdx].classList.contains('isLink')) return;  // don't fullscreen, handle link instead
+            ev.preventDefault();  // matters on mobile for some reason: don't deactivate immediately
             // we interpret it as a click
             toggleFullscreen();
         } else {

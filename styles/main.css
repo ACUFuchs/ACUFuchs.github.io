@@ -97,7 +97,7 @@ h2 {
 	justify-content: space-evenly;
 	align-items: center;
 	background-color: #ceb53b;
-	background-image: url("../assets/bg-imgs/nyamikonyv.webp");
+	background-image: url("../assets/bg-imgs/apokalyps.webp");
 }
 
 .where #text {
@@ -118,7 +118,7 @@ h2 {
 .how {
 	flex-direction: column;
 	background-color: #f810b7;
-	background-image: url("../assets/bg-imgs/apokalyps.webp");
+	background-image: url("../assets/bg-imgs/nyamikonyv.webp");
 }
 
 .how #apply {
@@ -238,7 +238,7 @@ video {
 
 .sponsors a {
 	/* yessir! */
-	color: rgba(0, 0, 0, 0);
+	text-decoration: none;
 }
 
 .sponsors img {
@@ -271,7 +271,7 @@ footer #jmail {
 
 .stack-container {
 	background-color: #4cc2e2;
-	background-image: url('../assets/bg-imgs/fake.webp');
+	background-image: url('../assets/bg-imgs/angyal.webp');
 	flex-direction: column;
 	width: 100%;
 	padding-left: 0;
