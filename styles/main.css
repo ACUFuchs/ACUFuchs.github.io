@@ -132,11 +132,18 @@ h2 {
 	padding-right: 8%;
 	padding-left: 7%;
 	padding-bottom: 2%;
-	font-size: 0.75rem;
+	font-size: 0.72rem;
 	flex-direction: column;
 	background-color: #dbdcca;
 	background-image: url("../assets/bg-imgs/szentirma.webp");
 }
+
+.tncs #ethos {
+	font-size: 0.6rem;
+	font-style: italic;
+	margin-top: -2%;
+}
+
 
 ol {
 	counter-reset: item;
