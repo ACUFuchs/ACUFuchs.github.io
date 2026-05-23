@@ -144,7 +144,6 @@ h2 {
 	margin-top: -2%;
 }
 
-
 ol {
 	counter-reset: item;
 	padding-inline-start: 4%;
@@ -200,14 +199,16 @@ video {
 	margin-top: 8%;
 }
 
-.where iframe {
+.where #osm-map {
 	width: 60%;
-	/* height: 90%; */
-	/* width: 12rem; */
 	aspect-ratio: 16/9;
-	/* height: 16rem; */
 	border-radius: 0.2rem;
 	border: 0.3vw solid var(--wfg);
+}
+
+.leaflet-control-attribution {
+  font-family: var(--fonx); /* has to be overriden */
+  font-size: 0.3rem;
 }
 
 .disclaimer {

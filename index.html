@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="assets/acufuchs-logos/circle-black.png">
     <link rel="icon" type="image/svg+xml" id="favicon" href="assets/acufuchs-logos/circle-black.svg">
     <link rel="apple-touch-icon" href="assets/acufuchs-logos/circle-black.svg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
     <script>
       function setFavicon() {
       const favicon = document.getElementById("favicon");
@@ -59,7 +60,7 @@
       </div>
     </div>
     <div class="where section">
-      <iframe title="openstreetmap showing where the event center is located: Vienna, Donau Island" src="https://www.openstreetmap.org/export/embed.html?bbox=16.189041137695316%2C48.154176701412744%2C16.591758728027347%2C48.334571409108214&amp;layer=mapnik&amp;marker=48.24445358418019%2C16.390399932861328"></iframe>
+      <div id="osm-map" role="img" aria-label="openstreetmap showing where the event center is located: Vienna, Donau Island"></div>
       <div id="text">
         <h2>where</h2>
         <p><strong>Vienna:</strong><br>
@@ -92,6 +93,8 @@
       </ol>
       <p id="ethos">Hey, this isn't an actual race. We are all here to have a good time! Just remember to ride responsibly and look out for everyone, so that we can all enjoy ACUFuchs safe and happy. Love AF</p>
     </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/map.js"></script>
     <script src="scripts/iMgViewer.js"></script>
     <div class="stack-container section">
       <h2>media</h2>
