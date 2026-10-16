@@ -1,150 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="author" content="Jeromos Kovács">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACU Fuchs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/acufuchs-logos/circle-black.png">
     <link rel="icon" type="image/svg+xml" id="favicon" href="assets/acufuchs-logos/circle-black.svg">
     <link rel="apple-touch-icon" href="assets/acufuchs-logos/circle-black.svg">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css">
     <script>
-      function setFavicon() {
-      const favicon = document.getElementById("favicon");
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        favicon.href = "assets/acufuchs-logos/circle-white.svg";
-      } else {
-        favicon.href = "assets/acufuchs-logos/circle-black.svg";
-      }
-    }
-    // Set favicon on page load
-    setFavicon();
-    // Listen for changes in preferred color scheme
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
+        function setFavicon() {
+            const favicon = document.getElementById("favicon");
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                favicon.href = "assets/acufuchs-logos/circle-white.svg";
+            } else {
+                favicon.href = "assets/acufuchs-logos/circle-black.svg";
+            }
+        }
+        // Set favicon on page load
+        setFavicon();
+        // Listen for changes in preferred color scheme
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", setFavicon);
     </script>
     <meta name="description" content="ACU Fuchs">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- <h1>ACU Fuchs</h1> -->
     <div class="logo section centered">
-      <picture>
-        <source srcset="assets/acufuchs-logos/rect-white.svg" media="(prefers-color-scheme: dark)">
-        <img id="logo" class="centered" src="assets/acufuchs-logos/rect-black-white_bg.svg" alt="macho ACU Fuchs logo">
-      </picture>
+        <picture>
+            <source srcset="assets/acufuchs-logos/rect-white.svg" media="(prefers-color-scheme: dark)">
+            <img id="logo" class="centered" src="assets/acufuchs-logos/rect-black-white_bg.svg"
+                alt="macho ACU Fuchs logo">
+        </picture>
     </div>
     <div class="when section">
-      <h2>when</h2>
-      <p><strong>30 May 2026</strong></p>
-      <p><a href="assets/ACU_Fuchs.ics">save the date</a></p>
+        <h2>when</h2>
+        <p><strong>30 May 2026</strong></p>
+        <p><a href="assets/ACU_Fuchs.ics">save the date</a></p>
     </div>
     <div class="how section">
-      <h2>how to apply</h2>
-      <!-- <h2>give us your thoughts</h2> -->
-      <div id="apply">
-        <p>
-          <strong>fill in
-            <!-- 25 -->
-            <!-- <a target="_blank" href="https://app.formbricks.com/s/cm9pw8oibfd1yw201b08kx0o3">this form</a></strong> -->
-            <!-- 25 after -->
-            <!-- <a target="_blank" href="https://app.formbricks.com/s/cmc7xwk81io4mwf01nu0iipku">this form</a></strong> -->
-            <!-- 26 -->
-            <a target="_blank" href="https://app.formbricks.com/s/rnh2jgn49f1qjf1cw9hs8cja?source=website">this form</a></strong>
-        </p>
-        <p>follow us on
-          <a target="_blank" href="https://www.instagram.com/acufuchs/?utm_source=ig_web_button_share_sheet">instagram</a></p>
-      </div>
+        <h2>how to apply</h2>
+        <!-- <h2>give us your thoughts</h2> -->
+        <div id="apply">
+            <p>
+                <strong>fill in
+                    <!-- 25 -->
+                    <!-- <a target="_blank" href="https://app.formbricks.com/s/cm9pw8oibfd1yw201b08kx0o3">this form</a></strong> -->
+                    <!-- 25 after -->
+                    <!-- <a target="_blank" href="https://app.formbricks.com/s/cmc7xwk81io4mwf01nu0iipku">this form</a></strong> -->
+                    <!-- 26 -->
+                    <a target="_blank" href="https://app.formbricks.com/s/rnh2jgn49f1qjf1cw9hs8cja?source=website">this
+                        form</a></strong>
+            </p>
+            <p>follow us on
+                <a target="_blank"
+                    href="https://www.instagram.com/acufuchs/?utm_source=ig_web_button_share_sheet">instagram</a>
+            </p>
+        </div>
     </div>
     <div class="where section">
-      <div id="osm-map" role="img" aria-label="openstreetmap showing where the event center is located: Vienna, Donau Island"></div>
-      <div id="text">
-        <h2>where</h2>
-        <p><strong>Vienna:</strong><br>
-          <a target="_blank" href="https://maps.app.goo.gl/4S7msXWBXx9MGyR8A">48.2446N,<br>16.3910E</a></p>
-      </div>
+        <script src="scripts/map.js" type="module"></script>
+        <div id="osm-map" role="img"
+            aria-label="openstreetmap showing where the event center is located: Vienna, Donau Island"></div>
+        <div id="text">
+            <h2>where</h2>
+            <p><strong>Vienna:</strong><br>
+                <a target="_blank" href="https://maps.app.goo.gl/4S7msXWBXx9MGyR8A">48.2446N,<br>16.3910E</a>
+            </p>
+        </div>
     </div>
     <div class="tncs section">
-      <h2>Terms and Conditions</h2>
-      <ol>
-        <li>Entry to the event is at your own risk.</li>
-        <li>You are only allowed to race with a
-          <strong>,Lúd’</strong>
-          <i>[luːd]</i>, a folding bike with a maximum tyre size of 20”, powered exclusively by you.</li>
-        <li>You are required to wear a helmet.</li>
-        <li>The application fee is some Drinks and Snacks&trade; but we accept donations such as honey or money or more
-          <strong>Lúd</strong>s.</li>
-        <li>Don’t be an
-          <strong>Arschloch</strong>. Anyone who breaks the competition rules is an
-          <strong>Arschloch</strong>. Please just don’t.</li>
-        <li>You may only endanger other competitors up to a reasonable limit. No dirty riding.</li>
-        <li>You must not exceed the track limits while racing.</li>
-        <li>Note that
-          <strong>,Patak’</strong>
-          <i>[pɑtɑk]</i>
-          (innocent pedestrians, bystanders, children, dogs, runners, DOGs etc.) might be on the racetrack during the competition and you must not hit them. <u>You are also required to show respect towards them.</u></li>
-        <li>Don’t drink and ride! Ride carefully,
-          <u>then</u>
-          drink as you like.</li>
-        <li>The competition rules may evolve and/or change at any time, so please pay close attention to any updates.</li>
-      </ol>
-      <p id="ethos">Hey, this isn't an actual race. We are all here to have a good time! Just remember to ride responsibly and look out for everyone, so that we can all enjoy ACUFuchs safe and happy. Love AF</p>
+        <h2>Terms and Conditions</h2>
+        <ol>
+            <li>Entry to the event is at your own risk.</li>
+            <li>You are only allowed to race with a
+                <strong>,Lúd’</strong>
+                <i>[luːd]</i>, a folding bike with a maximum tyre size of 20”, powered exclusively by you.
+            </li>
+            <li>You are required to wear a helmet.</li>
+            <li>The application fee is some Drinks and Snacks&trade; but we accept donations such as honey or money or
+                more
+                <strong>Lúd</strong>s.
+            </li>
+            <li>Don’t be an
+                <strong>Arschloch</strong>. Anyone who breaks the competition rules is an
+                <strong>Arschloch</strong>. Please just don’t.
+            </li>
+            <li>You may only endanger other competitors up to a reasonable limit. No dirty riding.</li>
+            <li>You must not exceed the track limits while racing.</li>
+            <li>Note that
+                <strong>,Patak’</strong>
+                <i>[pɑtɑk]</i>
+                (innocent pedestrians, bystanders, children, dogs, runners, DOGs etc.) might be on the racetrack during
+                the competition and you must not hit them. <u>You are also required to show respect towards them.</u>
+            </li>
+            <li>Don’t drink and ride! Ride carefully,
+                <u>then</u>
+                drink as you like.
+            </li>
+            <li>The competition rules may evolve and/or change at any time, so please pay close attention to any
+                updates.</li>
+        </ol>
+        <p id="ethos">Hey, this isn't an actual race. We are all here to have a good time! Just remember to ride
+            responsibly and look out for everyone, so that we can all enjoy ACUFuchs safe and happy. Love AF</p>
     </div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="scripts/map.js"></script>
     <script src="scripts/iMgViewer.js"></script>
     <div class="stack-container section">
-      <h2>media</h2>
-      <div class="image-stack" id="imageStack">
-        <a href="https://photos.google.com/share/AF1QipMqAKCIeBkzsZR7Ge5cWJkxRSjEgBMvvMDMVGYyk0eWFfcWFW4sC0ddQJe6W5zvrQ?key=SU5lVEQwLVhNZnBSTVk5ZEZySXl6WEMxSjlWR3J3" target="_blank">
-          <img class="isLink" src="assets/media/gogol.webp" alt="google photos" loading="lazy">
-        </a>
-        <a href="https://www.flickr.com/photos/citybiker_at/albums/72177720326894152" target="_blank">
-          <img class="isLink" src="assets/media/flixer.webp" alt="flickers" loading="lazy">
-        </a>
-        <img src="assets/media/racestructure.webp" alt="Race Structure" loading="lazy">
-        <img src="assets/media/kurvencarte.webp" alt="map of the curve" loading="lazy">
-        <img src="assets/media/sitemap.png" alt="event map" loading="lazy">
-        <img src="assets/media/flyer.gif" alt="flyer" loading="lazy">
-      </div>
+        <h2>media</h2>
+        <div class="image-stack" id="imageStack">
+            <a href="https://photos.google.com/share/AF1QipMqAKCIeBkzsZR7Ge5cWJkxRSjEgBMvvMDMVGYyk0eWFfcWFW4sC0ddQJe6W5zvrQ?key=SU5lVEQwLVhNZnBSTVk5ZEZySXl6WEMxSjlWR3J3"
+                target="_blank">
+                <img class="isLink" src="assets/media/gogol.webp" alt="google photos" loading="lazy">
+            </a>
+            <a href="https://www.flickr.com/photos/citybiker_at/albums/72177720326894152" target="_blank">
+                <img class="isLink" src="assets/media/flixer.webp" alt="flickers" loading="lazy">
+            </a>
+            <img src="assets/media/racestructure.webp" alt="Race Structure" loading="lazy">
+            <img src="assets/media/kurvencarte.webp" alt="map of the curve" loading="lazy">
+            <img src="assets/media/sitemap.png" alt="event map" loading="lazy">
+            <img src="assets/media/flyer.gif" alt="flyer" loading="lazy">
+        </div>
     </div>
     <div id="fullscreenOverlay" class="fullscreen-overlay">
-      <img id="fullscreenImg" src="" alt="Full Screen Image">
+        <img id="fullscreenImg" src="" alt="Full Screen Image">
     </div>
     <div class="about section">
-      <div class="bober">
-        <h2>about us</h2>
-        <video controls poster="assets/thumbnail.webp">
-          <source src="assets/ACU_Fuchs.webm" type="video/webm">
-        </video>
-      </div>
-      <p id="pathos">4 crazy, young friends were bored in the rain under The Bridge, started racing with folding bikes. Having had incredible amount of fun, couldn't stop for the next few days. Decided to organize it as a nocturnal crit race next year.</p>
+        <div class="bober">
+            <h2>about us</h2>
+            <video controls poster="assets/thumbnail.webp">
+                <source src="assets/ACU_Fuchs.webm" type="video/webm">
+            </video>
+        </div>
+        <p id="pathos">4 crazy, young friends were bored in the rain under The Bridge, started racing with folding
+            bikes. Having had incredible amount of fun, couldn't stop for the next few days. Decided to organize it as a
+            nocturnal crit race next year.</p>
     </div>
     <div class="sponsors section">
-      <!-- <p><strong>sponsors & partners</strong></p> -->
-      <h2>sponsors & partners</h2>
-      <p><i>(past as well)</i></p>
-      <div id="logos" class="centered">
-        <a href="https://www.instagram.com/wienercrocs" target="_blank">
-          <img src="assets/sponsor-logos/wienercrocs.webp" alt="logo of the wienercrocs" loading="lazy">
-        </a>
-        <a href="https://citybiker.at/pages/brompton-junction-vienna" target="_blank">
-          <img id="brompton" src="assets/sponsor-logos/brompton-junction.svg" alt="logo of brompton junction vienna" loading="lazy">
-        </a>
-        <a href="https://www.instagram.com/th3_cha1n" target="_blank">
-          <img id="chain" src="assets/sponsor-logos/chain.svg" alt="logo of the chain" loading="lazy">
-        </a>
-        <a href="https://korimtiming.hu" target="_blank">
-          <img src="assets/sponsor-logos/korim.svg" alt="logo of Korim endurance timing" loading="lazy">
-        </a>
-      </div>
+        <!-- <p><strong>sponsors & partners</strong></p> -->
+        <h2>sponsors & partners</h2>
+        <p><i>(past as well)</i></p>
+        <div id="logos" class="centered">
+            <a href="https://www.instagram.com/wienercrocs" target="_blank">
+                <img src="assets/sponsor-logos/wienercrocs.webp" alt="logo of the wienercrocs" loading="lazy">
+            </a>
+            <a href="https://citybiker.at/pages/brompton-junction-vienna" target="_blank">
+                <img id="brompton" src="assets/sponsor-logos/brompton-junction.svg"
+                    alt="logo of brompton junction vienna" loading="lazy">
+            </a>
+            <a href="https://www.instagram.com/th3_cha1n" target="_blank">
+                <img id="chain" src="assets/sponsor-logos/chain.svg" alt="logo of the chain" loading="lazy">
+            </a>
+            <a href="https://korimtiming.hu" target="_blank">
+                <img src="assets/sponsor-logos/korim.svg" alt="logo of Korim endurance timing" loading="lazy">
+            </a>
+        </div>
     </div>
     <!-- <hr> -->
-    <footer><p class="centered">contact us via
-        <span id="jmail">acufuchs at gmail dot com</span>, or
-        <a target="_blank" href="https://github.com/acufuchs/acufuchs.github.io/issues/new">open a GitHub issue</a></p></footer>
-  </body>
+    <footer>
+        <p class="centered">contact us via
+            <span id="jmail">acufuchs at gmail dot com</span>, or
+            <a target="_blank" href="https://github.com/acufuchs/acufuchs.github.io/issues/new">open a GitHub issue</a>
+        </p>
+    </footer>
+</body>
+
 </html>
